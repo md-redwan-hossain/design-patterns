@@ -1,7 +1,7 @@
-﻿using AbstractFactory.Factory;
+﻿using AbstractFactory;
+using AbstractFactory.Factory;
 
-GamingPcFactory.CreateProcessor();
-GamingPcFactory.CreateStorage();
-
-OfficePcFactory.CreateProcessor();
-OfficePcFactory.CreateStorage();
+// Pc is the abstract factory, and it received another factory
+// In other words, Pc is factory of factory
+var officePc = new Pc(new OfficePcFactory());
+var gamingPc = new Pc(new GamingPcFactory());

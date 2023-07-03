@@ -4,14 +4,14 @@ using AbstractFactory.Factory.Interfaces;
 
 namespace AbstractFactory.Factory;
 
-internal abstract class OfficePcFactory : IPcFactory
+internal class OfficePcFactory : IPcFactory
 {
-    public static IProcessor CreateProcessor()
+    public IProcessor CreateProcessor()
     {
         return new OfficeProcessor();
     }
 
-    public static IStorage CreateStorage()
+    public IStorage CreateStorage()
     {
         return new OfficeStorage();
     }
